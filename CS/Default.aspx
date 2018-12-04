@@ -6,63 +6,13 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
-    <title></title>
-    <script type="text/javascript">
-        var FocusedCellColumnIndex = 0;
-        var FocusedCellRowIndex = 0;
-        function OnInit(s, e) {
-            ASPxClientUtils.AttachEventToElement(Grid.GetMainElement(), "keydown", function (evt) {
-                if (evt.keyCode === ASPxClientUtils.StringToShortcutCode("UP"))
-                    UpPressed();
-                else if (evt.keyCode === ASPxClientUtils.StringToShortcutCode("DOWN"))
-                    DownPressed();
-                else if (evt.keyCode === ASPxClientUtils.StringToShortcutCode("RIGHT"))
-                    RightPressed();
-                else if (evt.keyCode === ASPxClientUtils.StringToShortcutCode("LEFT"))
-                    LeftPressed();
-            });
-        }
-        function OnStartEditCell(s, e) {
-            FocusedCellColumnIndex = e.focusedColumn.index;
-            FocusedCellRowIndex = e.visibleIndex;
-        }
-        function OnEndEditCell(s, e) {
-            FocusedCellColumnIndex = 0;
-            FocusedCellRowIndex = 0;
-        }
-        function UpPressed() {
-            if (FocusedCellRowIndex > Grid.GetTopVisibleIndex())
-                Grid.batchEditApi.StartEdit(FocusedCellRowIndex - 1, FocusedCellColumnIndex);
-            else
-                Grid.batchEditApi.EndEdit();
-        }
-        function DownPressed() {
-            var lastRecordIndex = Grid.GetTopVisibleIndex() + Grid.GetVisibleRowsOnPage() - 1;
-            if (FocusedCellRowIndex < lastRecordIndex)
-                Grid.batchEditApi.StartEdit(FocusedCellRowIndex + 1, FocusedCellColumnIndex);
-            else
-                Grid.batchEditApi.EndEdit();
-        }
-        function RightPressed() {
-            if (FocusedCellColumnIndex < Grid.GetColumnCount())
-                Grid.batchEditApi.StartEdit(FocusedCellRowIndex, FocusedCellColumnIndex + 1);
-            else
-                Grid.batchEditApi.EndEdit();
-        }
-        function LeftPressed() {
-            if (FocusedCellColumnIndex > 0)
-                Grid.batchEditApi.StartEdit(FocusedCellRowIndex, FocusedCellColumnIndex - 1);
-            else
-                Grid.batchEditApi.EndEdit();
-        }
-    </script>
+    <title>ASPxGridView - Batch Edit - Navigation by Up/Left/Down/Right buttons are implemented out-of-the-box in v16.1</title>
 </head>
 <body>
     <form id="form1" runat="server">
         <div>
-            <dx:ASPxGridView ID="Grid" runat="server" ClientInstanceName="Grid">
+            <dx:ASPxGridView ID="Grid" runat="server">
                 <SettingsEditing Mode="Batch"></SettingsEditing>
-                <ClientSideEvents Init="OnInit" BatchEditStartEditing="OnStartEditCell" BatchEditEndEditing="OnEndEditCell" />
             </dx:ASPxGridView>
         </div>
     </form>
