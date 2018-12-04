@@ -12,6 +12,7 @@
 <br><strong>For earlier versions:</strong><br><br>In this example, ASPxGridView is used in Batch Edit mode. This feature allows users to move focus from one editable cell to another. Navigation is performed by the Up/Left/Down/Right buttons.<br><br><strong>MVC:</strong><br><a href="https://www.devexpress.com/Support/Center/p/T350476">GridView - How to implement navigation by Up/Left/Down/Right keyboard arrows in the Batch Edit mode </a>
 
 <br/>
+<br/>
 <p>Please note that our CodeCentral demonstrates this example using the latest available version of our controls.</p>
 
 
