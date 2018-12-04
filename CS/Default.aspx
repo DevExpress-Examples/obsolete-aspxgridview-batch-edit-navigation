@@ -6,7 +6,7 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
-    <title>ASPxGridView - How to implement navigation by Up/Left/Down/Right buttons when the Batch Edit mode is used</title>
+    <title>1 ASPxGridView - How to implement navigation by Up/Left/Down/Right buttons when the Batch Edit mode is used</title>
     <script type="text/javascript">
         var FocusedCellColumnIndex = 0;
         var FocusedCellRowIndex = 0;
