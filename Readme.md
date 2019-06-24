@@ -5,6 +5,9 @@
 * [Default.aspx.cs](./CS/Default.aspx.cs) (VB: [Default.aspx](./VB/Default.aspx))
 <!-- default file list end -->
 # OBSOLETE - ASPxGridView - How to implement navigation by Up/Left/Down/Right buttons when the Batch Edit mode is used
+<!-- run online -->
+**[[Run Online]](https://codecentral.devexpress.com/t283418)**
+<!-- run online end -->
 
 
 <strong>UPDATED:</strong><br><br>
